@@ -1,0 +1,70 @@
+section {
+  color: white;
+  margin-top: 8rem;
+}
+
+
+.modal-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 100%;
+
+  button {
+    color: white;
+  }
+}
+
+.modal-content {
+  background-color: hsl(0, 0%, 99%);
+}
+
+.card-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 25px;
+
+  padding: 10px 15px;
+}
+
+.modal-dialog {
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+[set] {
+  width: 90%;
+
+  + [set] {
+    border-top: 1px solid rgb(255, 255, 255);
+  }
+}
+
+img {
+  max-width: 250px;
+}
+
+.modal {
+  position: absolute;
+  inset: 10% 10% auto 5%;
+  width: 90%;
+  height: 80%;
+
+  border-radius: 10px;
+}
+
+li {
+  cursor: pointer;
+}
+

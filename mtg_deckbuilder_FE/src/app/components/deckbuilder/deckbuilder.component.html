@@ -1,0 +1,743 @@
+<section id="deckbuilder" class="container-fluid">
+  <div>
+    <div class="">
+      <button
+        id="create-deck-btn"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#deckNameModal"
+        (click)="openModal()"
+      >
+        Create a deck
+      </button>
+    </div>
+    <div id="list-card" class="filter-dash">
+      <div class="all-filters">
+        <div class="filter-container">
+          <!-- CARD BY SET -->
+          <div class="dropdown dropdown-menu-dark">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Select the set of Magic
+            </button>
+            <ul
+              class="dropdown-menu dropdown-menu-dark scrollable"
+              id="scollable-menu"
+              aria-labelledby="dropdownMenuButton1"
+            >
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('neo')"
+                  >Kamigawa</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('vow')"
+                  >Innistrad</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('afr')"
+                  >Dungeons and Dragons: Avventure nei Forgotten Realms</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('khm')"
+                  >Kaldheim</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('znr')"
+                  >Rinascita di Zendikar</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('eld')"
+                  >Il Trono di Eldraine</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('xln')"
+                  >Ixalan</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('akh')"
+                  >Amonkhet</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('kld')"
+                  >Kaladesh</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('emn')"
+                  >Luna Spettrale</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('bfz')"
+                  >Battaglia per Zendikar</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('ktk')"
+                  >I Khan di Tarkir</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('jou')"
+                  >Viaggio verso Nyx</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('rtr')"
+                  >Ritorno a Ravnica</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('dka')"
+                  >Ascesa Oscura</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('nph')"
+                  >Nuova Phyrexia</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('mbs')"
+                  >Mirrodin Assediato</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('som')"
+                  >Cicatrici di Mirrodin</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('roe')"
+                  >Ascesa degli Eldrazi</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('zen')"
+                  >Zendikar</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('shm')"
+                  >Landa Tenebrosa</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('lrw')"
+                  >Lorwyn</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('plc')"
+                  >Caos Dimensionale</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('dis')"
+                  >Discordia</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('rav')"
+                  >Ravnica: Città delle Gilde</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('chk')"
+                  >Campioni di Kamigawa</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('bok')"
+                  >Traditori di Kamigawa</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('sok')"
+                  >Liberatori di Kamigawa</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('dst')"
+                  >Darksteel</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('mrd')"
+                  >Mirrodin</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('scg')"
+                  >Flagello</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('tor')"
+                  >Tormento</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('mmq')"
+                  >Maschere di Mercadia</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('apc')"
+                  >Apocalisse</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('usg')"
+                  >Saga di Urza</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('ulg')"
+                  >Eredità di Urza</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('tmp')"
+                  >Tempesta</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('ice')"
+                  >Era Glaciale</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('arn')"
+                  >Arabian Nights</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('fem')"
+                  >Fallen Empires</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('m19')"
+                  >Set Base 2019</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('m20')"
+                  >Set Base 2020</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('m21')"
+                  >Set Base 2021</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('m15')"
+                  >Magic 2015</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('m14')"
+                  >Magic 2014</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('m13')"
+                  >Magic 2013</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('m12')"
+                  >Magic 2012</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('m11')"
+                  >Magic 2011</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('ori')"
+                  >Magic Origins</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('9ed')"
+                  >Nona Edizione</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('7ed')"
+                  >Settima Edizione</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('6ed')"
+                  >Sesta Edizione (Classic)</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('leb')"
+                  >Limited Edition Beta</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" (click)="getCardBySet('lea')"
+                  >Limited Edition Alfa</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- FILTER CARD BY COLOR -->
+
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Colors filter
+            </button>
+            <ul
+              class="dropdown-menu dropdown-menu-dark colors-filter"
+              aria-labelledby="dropdownMenuButton2"
+            >
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    [(ngModel)]="selectedColors['W']"
+                  />White</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    [(ngModel)]="selectedColors['U']"
+                  />Blue</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    [(ngModel)]="selectedColors['B']"
+                  />Black</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    [(ngModel)]="selectedColors['R']"
+                  />Red</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    [(ngModel)]="selectedColors['G']"
+                  />Green</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- FILTER CARD BY TYPE -->
+
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton3"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Type filter
+            </button>
+            <ul
+              class="dropdown-menu dropdown-menu-dark"
+              aria-labelledby="dropdownMenuButton3"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  (click)="onFilterCards('Creature')"
+                  >Creature</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  (click)="onFilterCards('Land')"
+                  >Land</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  (click)="onFilterCards('Artifact')"
+                  >Artifact</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  (click)="onFilterCards('Enchantment')"
+                  >Enchantment</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  (click)="onFilterCards('Planeswalker')"
+                  >Planeswalker</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  (click)="onFilterCards('Sorcery')"
+                  >Sorcery</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  (click)="onFilterCards('Instant')"
+                  >Instant</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- FILTER CARD BY LEGALITY -->
+
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton4"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Legality filter
+            </button>
+            <ul
+              class="dropdown-menu dropdown-menu-dark"
+              aria-labelledby="dropdownMenuButton4"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  (click)="onFilterCardsLegality('Standard')"
+                  >Standard</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  (click)="onFilterCardsLegality('Modern')"
+                  >Modern</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  (click)="onFilterCardsLegality('Commander')"
+                  >Commander</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  (click)="onFilterCardsLegality('Oathbreaker')"
+                  >Oathbreaker</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  (click)="onFilterCardsLegality('Pioneer')"
+                  >Pioneer</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  (click)="onFilterCardsLegality('Historic')"
+                  >Historic</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  (click)="onFilterCardsLegality('Legacy')"
+                  >Legacy</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  (click)="onFilterCardsLegality('Vintage')"
+                  >Vintage</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  (click)="onFilterCardsLegality('Frotnier')"
+                  >Frotnier</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  (click)="onFilterCardsLegality('Duel')"
+                  >Duel</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="filter-btns">
+          <button class="btn btn-primary" (click)="onFilter()">Filter</button>
+          <button class="btn btn-danger" (click)="resetFilters()">
+            Reset filters
+          </button>
+        </div>
+      </div>
+
+      <!-- INPUT PER RICERCA PER NOME -->
+      <div id="searchbar" class="">
+        <form (ngSubmit)="submit()" #form="ngForm" class="d-flex">
+          <input
+            class="form-control rounded ps-2"
+            ngModel
+            name="name"
+            #name="ngModel"
+            type="text"
+          />
+          <button type="submit" class="btn rounded-2 search-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- TODO SPOSTARE LE MODALI IN COMPONENTI SEPARATI -->
+
+    <!--  ----MODALE PER RENDERIZZARE LA CARTA CLICCATA-----  -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add card</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                <ng-container *ngIf="selectedCard">
+                  <img
+                    width="280px"
+                    src="{{ selectedCard?.image_uris?.normal }}"
+                    *ngIf="selectedCard?.image_uris?.small"
+                    alt="card_img"
+                  />
+                  <img
+                    width="280px"
+                    src="{{ selectedCard?.card_faces?.[0].image_uris?.small }}"
+                    *ngIf="selectedCard?.card_faces?.[0]?.image_uris?.small"
+                    alt="card_img"
+                  />
+                </ng-container>
+              </div>
+              <div class="col">
+                <p>Quantity</p>
+                <input type="number" [(ngModel)]="quantity" min="1" />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="addToDeck(selectedCard, quantity)"
+              data-bs-dismiss="modal"
+            >
+              Add to deck
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  ----MODALE PER CREAZIONNE DEL DECK-----  -->
+    <div
+      class="modal fade"
+      id="deckNameModal"
+      tabindex="-1"
+      aria-labelledby="deckNameModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Insert the name of the Deck
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="input-group mb-3">
+                <form class="deck-creation" (ngSubmit)="createDeck(deckName)">
+                  <label>
+                    Deck name:
+                    <input
+                      type="text"
+                      name="deckName"
+                      [(ngModel)]="deckName"
+                      required
+                      #deckNameInput
+                    />
+                  </label>
+                  <button
+                    type="submit"
+                    class="btn btn-dark"
+                    data-bs-dismiss="modal"
+                    [disabled]="deckNameInput.value === ''"
+                  >
+                    Create
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="rendering-card">
+      <div id="left-deckbuilder">
+        <div class="cards-container">
+          <div
+            class="expansion-card"
+            *ngFor="
+              let card of cards
+                | paginate : { itemsPerPage: 10, currentPage: p }
+            "
+          >
+            <app-card
+              [card]="card"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              (click)="selectedCard = card; resetQuantity()"
+            ></app-card>
+          </div>
+
+          <!-- <div class="d-flex flex-column justify-content-center mt-3"> -->
+          <!-- <div class="image-container">
+            <button class="addMana" (click)="addIsland()">
+              <img
+                src="../../../assets/img/Screenshot 2023-04-03 alle 12.09.42.png"
+              />
+            </button>
+            <button class="addMana" (click)="addLand()">
+              <img
+                src="../../../assets/img/Screenshot 2023-04-03 alle 12.08.03.png"
+              />
+            </button>
+            <button class="addMana" (click)="addSwamp()">
+              <img
+                src="../../../assets/img/Screenshot 2023-04-03 alle 12.09.53.png"
+              />
+            </button>
+            <button class="addMana" (click)="addMountain()">
+              <img
+                src="../../../assets/img/Screenshot 2023-04-03 alle 12.10.02.png"
+              />
+            </button>
+            <button class="addMana" (click)="addForest()">
+              <img
+                src="../../../assets/img/Screenshot 2023-04-03 alle 12.10.09.png"
+              />
+            </button>
+          </div> -->
+          <!-- </div> -->
+        </div>
+        <div class="mt-3 text-center">
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+
+      <div id="detail-card">
+        <app-deck></app-deck>
+      </div>
+    </div>
+  </div>
+</section>

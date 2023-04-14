@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+#sfondo {
+  background-color: #292929;
+}
+
+.deck-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 50px;
+
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.deck {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+
+  min-width: 150px;
+  min-height: 200px;
+
+  border: 1px solid black;
+  border-radius: 16px;
+  padding: 20px;
+  background: rgb(153, 143, 148);
+  background: linear-gradient(
+    90deg,
+    rgba(153, 143, 148, 1) 0%,
+    rgba(64, 42, 44, 1) 100%
+  );
+  color: white;
+  -webkit-transition: background-color 20s ease-out;
+  -moz-transition: background-color 20s ease-out;
+  -o-transition: background-color 20s ease-out;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  transition: background-color 20s ease-out;
+  box-shadow: 5px 5px 15px 5px #000000;
+
+  cursor: pointer;
+
+  &:hover {
+    background: rgb(153, 143, 148);
+    background: radial-gradient(
+      circle,
+      rgba(153, 143, 148, 1) 0%,
+      rgba(64, 42, 44, 1) 100%
+    );
+  }
+}
+
+.cards-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.expansion-card {
+  width: fit-content;
+  padding: inherit;
+
+  border-radius: 10px;
+
+  // background-image: url('./assets/img/pattern2.jpeg');
+
+  &:hover {
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
+  }
+}

@@ -1,0 +1,15 @@
+<div class="card-container">
+  <div>
+    <img
+      src="{{ card.image_uris?.normal }}"
+      *ngIf="card.image_uris?.normal"
+      alt="card_img"
+    />
+    <img
+      style="width: 70px"
+      src="{{ card.card_faces?.[0].image_uris?.normal }}"
+      *ngIf="card.card_faces?.[0].image_uris?.normal"
+      alt="card_img"
+    />
+  </div>
+</div>
